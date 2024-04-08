@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:space_x/core/theming/text_styles.dart';
 
 class RocketItemDetails extends StatelessWidget {
@@ -32,9 +33,11 @@ class RocketItemDetails extends StatelessWidget {
           title: Text('First Flight : '),
           trailing: Text('2006-03-24',style: Styles.textStyle16),
         ),
-        const Align(
+         Align(
           alignment: Alignment.bottomRight,
-          child: Text('Space X',style: Styles.textStyle18,)),
+          child: Transform.translate(
+            offset: const Offset(0, 40),
+            child: const Text('Space X',style: Styles.textStyle18,))),
          const Align(alignment: Alignment.bottomCenter,
         
         child: CircleAvatar(
