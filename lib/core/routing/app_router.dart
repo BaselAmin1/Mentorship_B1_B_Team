@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:space_x/core/routing/routes.dart';
-import 'package:space_x/features/rockets/presentaion/views/rocket_view.dart';
+import 'package:space_x/features/rockets/presentation/views/rocket_view.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {

@@ -7,7 +7,6 @@ import 'package:space_x/core/di.dart';
 import 'package:space_x/core/routing/app_router.dart';
 import 'package:space_x/core/routing/routes.dart';
 import 'package:space_x/core/theming/themes.dart';
-import 'package:space_x/features/rockets/presentaion/views/rocket_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
