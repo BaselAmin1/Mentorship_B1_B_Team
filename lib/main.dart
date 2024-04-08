@@ -5,7 +5,9 @@ import 'package:space_x/core/Api/dio_factory.dart';
 import 'package:space_x/core/cache_helper/cache_helper.dart';
 import 'package:space_x/core/di.dart';
 import 'package:space_x/core/routing/app_router.dart';
+import 'package:space_x/core/routing/routes.dart';
 import 'package:space_x/core/theming/themes.dart';
+import 'package:space_x/features/rockets/presentaion/views/rocket_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -41,6 +43,8 @@ class SpaceX extends StatelessWidget {
           theme: lightTheme,
           themeMode: ThemeMode.light,
           onGenerateRoute: appRouter.generateRoute,
+         initialRoute: Routes.kRocketView,
+       
         ),
       ),
     );
