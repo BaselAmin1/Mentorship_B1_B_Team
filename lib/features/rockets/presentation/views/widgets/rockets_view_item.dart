@@ -26,7 +26,7 @@ class RocketsViewItem extends StatelessWidget {
           ),
         ),
           
-        const CustomRocketViewImage(),
+        const CustomRocketViewImage(alignmentGeometry: Alignment.centerRight, radius: 70,),
               
           
       ],
