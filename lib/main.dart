@@ -42,8 +42,7 @@ class SpaceX extends StatelessWidget {
           theme: lightTheme,
           themeMode: ThemeMode.light,
           onGenerateRoute: appRouter.generateRoute,
-         initialRoute: Routes.kRocketView,
-       
+          initialRoute: Routes.homeScreen,
         ),
       ),
     );

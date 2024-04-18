@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:space_x/core/routing/routes.dart';
+
 import 'package:space_x/features/rockets/presentation/views/rocket_view.dart';
 import 'package:space_x/features/rockets/presentation/views/rockets_details_view.dart';
+
+import 'package:space_x/features/home/ui/home_screen.dart';
+
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
     final arguments = settings.arguments;
 
     switch (settings.name) {
+
       case Routes.kRocketView:
         return PageTransition(
             child: const RocketsView(),
@@ -23,6 +28,15 @@ class AppRouter {
           type: PageTransitionType.fade,
           settings: settings,
           duration: const Duration(milliseconds:200 )
+
+      case Routes.homeScreen:
+        return PageTransition(
+          type: PageTransitionType.fade,
+          duration: const Duration(milliseconds: 200),
+          alignment: Alignment.center,
+          settings: settings,
+          child: const HomeScreen(),
+
         );
       default:
         return PageTransition(
