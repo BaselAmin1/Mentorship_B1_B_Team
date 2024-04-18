@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:space_x/core/helpers/extensions.dart';
+import 'package:space_x/core/routing/routes.dart';
 import 'package:space_x/core/theming/text_styles.dart';
 import 'package:space_x/features/home/data/local/home_categories_date.dart';
 
@@ -62,7 +64,7 @@ class HomeCategoriesListViewItem extends StatelessWidget {
                           // context.pushNamed(context, Routes.crewsScreen);
                           break;
                         case 1:
-                          // context.pushNamed(context, Routes.rocketsScreen);
+                          context.pushNamed(Routes.kRocketView);
                           break;
                         case 2:
                           // context.pushNamed(context, Routes.launchpadsScreen);
@@ -78,7 +80,6 @@ class HomeCategoriesListViewItem extends StatelessWidget {
         Align(
           alignment: Alignment.topCenter,
           child: homeCategoriesData[index].image,
-         
         ),
       ],
     );

@@ -13,7 +13,7 @@ class RocketsViewBody extends StatelessWidget {
       height: double.infinity,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(Assets.backGroundImage),
+          image: AssetImage(Assets.assetsImagesHomeBackGroundImage),
           fit: BoxFit.cover,
         ),
       ),

@@ -19,7 +19,7 @@ class RocketDetailsViewBody extends StatelessWidget {
             child: ImageFiltered(
               imageFilter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
               child: Image.asset(
-                Assets.backGroundImage,
+                Assets.assetsImagesHomeBackGroundImage,
                 fit: BoxFit.cover,
               ),
             ),

@@ -19,7 +19,7 @@ final double radius;
           child:  CircleAvatar(
             radius: radius+3,backgroundColor: Colors.white,
             child: CircleAvatar(
-              backgroundImage: const AssetImage(Assets.rocketTestImage),
+              backgroundImage: const AssetImage(Assets.assetsImagesRocketTestImage),
               radius: radius,
             ),
           ),
