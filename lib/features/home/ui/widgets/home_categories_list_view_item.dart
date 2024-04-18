@@ -67,7 +67,7 @@ class HomeCategoriesListViewItem extends StatelessWidget {
                           context.pushNamed(Routes.kRocketView);
                           break;
                         case 2:
-                          // context.pushNamed(context, Routes.launchpadsScreen);
+                          context.pushNamed(Routes.launchPadsScreen);
                           break;
                       }
                     },

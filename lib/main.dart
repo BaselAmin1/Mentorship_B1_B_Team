@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:space_x/core/Api/dio_factory.dart';
+import 'package:space_x/core/bloc_observer.dart';
 import 'package:space_x/core/cache_helper/cache_helper.dart';
 import 'package:space_x/core/di.dart';
 import 'package:space_x/core/routing/app_router.dart';
@@ -13,6 +15,7 @@ void main() async {
   await setupGetIt();
   await DioFactory.init();
   await CacheHelper.init();
+  Bloc.observer = MyBlocObserver();
 
   runApp(SpaceX(
     appRouter: AppRouter(),
