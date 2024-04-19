@@ -6,10 +6,15 @@ class ApiServices {
   ApiServices(this._dioFactory);
   final DioFactory _dioFactory;
 
-    Future<Response?> getAllLaunchPads() async {
+  Future<Response?> getAllLaunchPads() async {
     return _dioFactory.get(
-      endPoint:
-          EndPoints.allLaunchPads,
+      endPoint: EndPoints.allLaunchPads,
+    );
+  }
+
+  Future<Response?> getAllCrews() async {
+    return _dioFactory.get(
+      endPoint: EndPoints.allCrews,
     );
   }
 }

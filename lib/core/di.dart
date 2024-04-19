@@ -1,6 +1,8 @@
 import 'package:get_it/get_it.dart';
 import 'package:space_x/core/Api/api_services.dart';
 import 'package:space_x/core/Api/dio_factory.dart';
+import 'package:space_x/features/crews/business_logic/cubit/all_crews_cubit.dart';
+import 'package:space_x/features/crews/data/repositories/crews_repository.dart';
 import 'package:space_x/features/launchpads/business_logic/cubit/all_launch_pads_cubit.dart';
 import 'package:space_x/features/launchpads/data/repositories/launch_pads_repository.dart';
 
@@ -12,4 +14,8 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<AllLaunchPadsRepository>(
       () => AllLaunchPadsRepository(getIt()));
   getIt.registerFactory<AllLaunchPadsCubit>(() => AllLaunchPadsCubit(getIt()));
+
+  getIt.registerLazySingleton<AllCrewsRepository>(
+      () => AllCrewsRepository(getIt()));
+  getIt.registerFactory<AllCrewsCubit>(() => AllCrewsCubit(getIt()));
 }
