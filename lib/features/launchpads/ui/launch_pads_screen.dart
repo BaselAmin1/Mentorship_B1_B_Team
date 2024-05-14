@@ -9,7 +9,23 @@ class LaunchPadsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AllLaunchPadsCubit, AllLaunchPadsState>(
       builder: (context, state) {
-        return const Scaffold();
+        
+        return Scaffold(
+          body: state is AllLaunchPadsLoading
+              ? const Center(
+                  child: CircularProgressIndicator(),
+                )
+              : Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(context
+                            .read<AllLaunchPadsCubit>()
+                            .allLaunchPadsList[0]
+                            .fullName ??
+                        '')
+                  ],
+                ),
+        );
       },
     );
   }

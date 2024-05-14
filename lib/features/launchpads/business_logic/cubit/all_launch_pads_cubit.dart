@@ -11,12 +11,15 @@ class AllLaunchPadsCubit extends Cubit<AllLaunchPadsState> {
   ) : super(AllLaunchPadsInitial());
   final AllLaunchPadsRepository allLaunchPadsRepository;
 
+  List<AllLaunchPadsModel> allLaunchPadsList = [];
   Future<void> getAllLaunchPads() async {
     emit(AllLaunchPadsLoading());
     var result = await allLaunchPadsRepository.getAllLaunchPads();
+
     result.fold((failure) {
       emit(AllLaunchPadsError(failure.errMessage));
     }, (allLaunchPadsList) {
+      this.allLaunchPadsList = allLaunchPadsList;
       emit(AllLaunchPadsSuccess(allLaunchPadsList));
     });
   }
