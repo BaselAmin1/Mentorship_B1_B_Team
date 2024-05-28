@@ -61,7 +61,7 @@ class HomeCategoriesListViewItem extends StatelessWidget {
                     onPressed: () {
                       switch (index) {
                         case 0:
-                          // context.pushNamed(context, Routes.crewsScreen);
+                          context.pushNamed(Routes.crewsScreen);
                           break;
                         case 1:
                           context.pushNamed(Routes.kRocketView);

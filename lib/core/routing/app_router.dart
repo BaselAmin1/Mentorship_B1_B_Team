@@ -4,7 +4,9 @@ import 'package:page_transition/page_transition.dart';
 import 'package:space_x/core/di.dart';
 import 'package:space_x/core/routing/routes.dart';
 import 'package:space_x/features/crews/business_logic/cubit/all_crews_cubit.dart';
-import 'package:space_x/features/crews/ui/crews_screen.dart';
+import 'package:space_x/features/crews/data/models/all_crews_model.dart';
+import 'package:space_x/features/crews/ui/crew_details_screen.dart';
+import 'package:space_x/features/crews/ui/crew_screen.dart';
 import 'package:space_x/features/home/ui/home_screen.dart';
 import 'package:space_x/features/launchpads/business_logic/cubit/all_launch_pads_cubit.dart';
 import 'package:space_x/features/launchpads/ui/launch_pads_screen.dart';
@@ -63,6 +65,7 @@ class AppRouter {
             child: const CrewsScreen(),
           ),
         );
+
       default:
         return PageTransition(
           child: Scaffold(
